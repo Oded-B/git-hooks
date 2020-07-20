@@ -1,0 +1,5 @@
+- id: jira_branch_name
+  name: Check branch name include ticket id
+  description: Check branch name include ticket id
+  entry: jira_branch_name.sh
+  language: script
