@@ -4,3 +4,8 @@
   entry: jira_branch_name.sh
   pass_filenames: false
   language: script
+- id: add_jira_ref_to_commit_msg
+  name: add jira tef as prefix
+  entry: add_jira_ref_to_commit_msg.sh
+  pass_filenames: true
+  language: script
