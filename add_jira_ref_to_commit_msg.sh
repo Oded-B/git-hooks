@@ -21,6 +21,7 @@ if ! which $SED | grep sed > /dev/null 2>&1; then
 fi
 
 BRANCH=$(git symbolic-ref HEAD)
+echo "===$1===="
 ORIGCOMMITMSG=$(cat $1)
 BRANCH_SANS_HEADS_FEATURES_ETC=$(echo $BRANCH | $SED -e 's/^refs\/heads\/\([a-z]*\/\)\?//gm')
 JIRAREF=$(echo $BRANCH_SANS_HEADS_FEATURES_ETC | $SED -r -e 's/^([A-Za-z]+-[0-9]+)?(.*)/\1/gm')
