@@ -4,7 +4,7 @@
 # Pre-commit hooks
 
 # Check branch name
-BRANCH_NAME_LENGTH=`git rev-parse --abbrev-ref HEAD | grep -E '^(master|SRE\-[0-9]+(\-|\_)[a-z0-9._-]+)$' | wc -c`
+BRANCH_NAME_LENGTH=`git rev-parse --abbrev-ref HEAD | grep -E '^(master|SRE\-[0-9]+(\-|\_)[a-zA-Z0-9._-]+)$' | wc -c`
 
 if [ ${BRANCH_NAME_LENGTH} -eq 0 ] ; then
   echo -e '\E[37;44m'"\033[1mERROR\033[0m in pre-commit hook: vim /export/web/.git/hooks/pre-commit"
